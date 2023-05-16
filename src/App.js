@@ -6,17 +6,31 @@ import { images } from './modules/object.js';
 //import antelopes from './imgs/antelopes.jpg';
 
 function App() {
+  //Images array set to empty
+  const contentImages = [];
+
+  //For...in loop iterating through the images object and adding <img/> tags to the contentImages array
+  for (const image in images) {
+    contentImages.push (
+      <img
+        key={image}
+        alt={image}
+        src={images[image].src}
+        ariaLabel={image}
+        role="button"
+        width="19.5%"
+        height="19.5%"
+      />
+    );
+  };
+
   return (
     <section id="wrapper">
       <div class="container">
         <h1>Amazing Animal Photos</h1>
       </div>
       <figure id="thumbnails">
-        <img src={images.antelopes.src} width="19.5%" height="19.5%" alt={images.antelopes.alt}/>
-        <img src={images.dolphins.src} width="19.5%" height="19.5%" alt={images.dolphins.alt}/>
-        <img src={images.elephants.src} width="19.5%" height="19.5%" alt={images.elephants.alt}/>
-        <img src={images.horses.src} width="19.5%" height="19.5%" alt={images.elephants.alt}/>
-        <img src={images.tiger.src} width="19.5%" height="19.5%" alt={images.tiger.alt}/>
+        {contentImages}
       </figure>
       <figure id="largeImage">
         <img src={images.antelopes.src} alt={images.antelopes.alt}/>
