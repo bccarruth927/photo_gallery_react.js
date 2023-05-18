@@ -11,22 +11,27 @@ export const images = {
     antelopes: {
         src: antelopes,
         alt: 'antelopes',
+        id: 'antelopes',
         caption: 'Two antelopes resting under the shade of a small tree. Photo credit: Bas van Brandwijk from Pexels.com'
     }, 
     dolphins: {
         src: dolphins,
-        alt: 'dolphins'
+        alt: 'dolphins',
+        id: 'dolphins'
     },
     elephants: {
         src: elephants,
-        alt: 'elephants'
+        alt: 'elephants',
+        id: 'elephants'
     },
     horses: {
         src: horses,
-        alt: 'horses'
+        alt: 'horses',
+        id: 'horses'
     },
     tiger: {
         src: tiger,
-        alt: 'tiger'
+        alt: 'tiger',
+        id: 'tiger'
     }
 };
