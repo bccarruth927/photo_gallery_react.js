@@ -10,28 +10,27 @@ import tiger from '../imgs/tiger.jpg';
 export const images = {
     antelopes: {
         src: antelopes,
-        alt: 'antelopes',
-        id: 'antelopes',
+        name: 'antelopes',
         caption: 'Two antelopes resting under the shade of a small tree. Photo credit: Bas van Brandwijk from Pexels.com'
-    }, 
+    },
     dolphins: {
         src: dolphins,
-        alt: 'dolphins',
-        id: 'dolphins'
+        name: 'dolphins',
+        caption: 'A school of dolphins swimming peacefully through the ocean. Photo credit: Jeremy Bishop from Pexels.com'
     },
     elephants: {
         src: elephants,
-        alt: 'elephants',
-        id: 'elephants'
+        name: 'elephants',
+        caption: 'A mother and baby elephant being sprayed off in an old parking lot. Photo credit: Oleksandr Pidvalnyi from Pexels.com'
     },
     horses: {
         src: horses,
-        alt: 'horses',
-        id: 'horses'
+        name: 'horses',
+        caption: 'A herd of horses prancing through a field in the early morning. Photo credit: Milena de Narvaez Ayllon from Pexels.com'
     },
     tiger: {
         src: tiger,
-        alt: 'tiger',
-        id: 'tiger'
+        name: 'tiger',
+        caption: 'A powerful portrait photo a Bengal Tiger. Photo credit: George Desipris from Pexels.com'
     }
 };

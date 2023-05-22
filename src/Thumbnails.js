@@ -1,7 +1,9 @@
 //Import the images object from the modules folder
 import { images } from './modules/object.js';
 
-function Thumbnails() {
+//Thumbnails Component
+
+function Thumbnails(props) {
     //Created variable for the images array
     const thumbnailImages = [];
 
@@ -10,17 +12,24 @@ function Thumbnails() {
         thumbnailImages.push(images[image]);
     };
 
+    //Event listener function to add a border to the thumbnail and change the state of the large image and caption
+    const handleClick = (event) => {
+        const selectedImage = event.target.alt;
+        props.onLargeImage(selectedImage);
+    }
+
     return (
         <figure id="thumbnails">
             {thumbnailImages.map(thumbnail => (
                 <img
-                    key={thumbnail.id}
-                    alt={thumbnail.alt}
+                    key={thumbnail.name}
+                    alt={thumbnail.name}
                     src={thumbnail.src}
-                    aria-label={thumbnail.id}
+                    aria-label={thumbnail.name}
                     role='button'
                     height='19.5%'
                     width='19.5%'
+                    onClick={handleClick}
                 />
             ))}
         </figure>
