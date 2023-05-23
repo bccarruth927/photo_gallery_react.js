@@ -12,24 +12,21 @@ function Thumbnails(props) {
         thumbnailImages.push(images[image]);
     };
 
-    //Event listener function to add a border to the thumbnail and change the state of the large image and caption
-    const handleClick = (event) => {
-        const selectedImage = event.target.alt;
-        props.onLargeImage(selectedImage);
-    }
-
     return (
         <figure id="thumbnails">
             {thumbnailImages.map(thumbnail => (
                 <img
-                    key={thumbnail.name}
+                    key={thumbnail.id}
+                    className={props.activeClass === thumbnail.id ? 'thumbUp' : 'thumbDown'}
                     alt={thumbnail.name}
                     src={thumbnail.src}
                     aria-label={thumbnail.name}
                     role='button'
                     height='19.5%'
                     width='19.5%'
-                    onClick={handleClick}
+                    onClick={() =>
+                        props.toggleClass(thumbnail.id)
+                    }
                 />
             ))}
         </figure>
