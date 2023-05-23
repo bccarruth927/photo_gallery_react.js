@@ -24,9 +24,11 @@ function Thumbnails(props) {
                     role='button'
                     height='19.5%'
                     width='19.5%'
-                    onClick={() =>
-                        props.toggleClass(thumbnail.id)
-                    }
+                    onClick={({target}) => {
+                        const selectedImage = target.alt;
+                        props.largeImageHandle(selectedImage);
+                        props.toggleClass(thumbnail.id);
+                    }}
                 />
             ))}
         </figure>
